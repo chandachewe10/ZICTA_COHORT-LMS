@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CONVERTING FROM KILOMETRES (KM) TO Millimeters (MM)</title>
+        <!-- Bootstrap-Core-CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"> 
+       <!-- Style-CSS -->
+    <link rel="stylesheet" href="{{asset(css/conversions.css)}}" type="text/css" media="all" />
+<link rel="stylesheet" href="css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<link rel="stylesheet" href="css/swipebox.css">
+<link rel="stylesheet" href="css/jquery-ui.css" />
+</head>
+    <body>
+        
+  <!--Inline CSS-->
+  <style>
+    body{
+color: #222222;
+background-color: #f2f2f0;
+background-color: #56385a;
+font-family: 'Muli', sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+.units{
+padding: 10px;
+font-size: 16px;
+background: rgba(0, 0, 0, 0.2);
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 3px;
+margin-bottom: 10px;
+transition: background .3s;
+color: #e6e6e6;
+
+
+
+}
+</style>
+
+
+        <center>
+            <div style="color:white;font-weight:bold">CONVERTING FROM KILOMETRES (KM) TO Millimeters (MM)</div>
+            <div class="shadow p-3 mb-5 bg-dark rounded" style="width:80%; margin-top:80px; background-color: #4a304d; padding:45px" >      
+                
+        
+        
+      <label for="kilometers" style="color: white;"> <input type='number' name="first" placeholder="Enter kilometers" border-style='ridge' id="kilometers" class="units"> km</label><br><br>
+      <label for="millimeters" style="color: white;">  <input type='value' name="second" placeholder="Output Millimeters" border-style='ridge' id="millimeters" class="units"> mm</label><br><br>
+        <button class="btn btn-success" onclick="answer()">Answer</button>
+            
+            </div>
+            
+        </center>
+         <script>
+             function answer(){
+
+var x=document.getElementById('kilometers').value;
+var y;   //millimeters
+y = (parseFloat(x) / (0.000001)).toFixed(2);
+var y=document.getElementById('millimeters').value=(y);
+}
+         </script> 
+        
+    </body>
+</html>

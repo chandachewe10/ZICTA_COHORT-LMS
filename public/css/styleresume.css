@@ -1,0 +1,35 @@
+#par,#start,#retart{
+    height: 100%;
+    position: relative;
+}
+
+
+.angle{
+    font-size: 26px;
+    position: absolute;
+    left:15px;
+    top: 45%;
+    transform: (0.-50%);
+    font-weight: bold;
+     color: white; 
+     padding:5px 15px;
+     border-radius: 100%;
+     cursor: pointer;
+ }   
+.secondangle{
+    font-size: 26px;
+    position: absolute;
+    right:15px;
+    top: 45%;
+    transform: (0.-50%);
+    font-weight: bold;
+     color: white; 
+     padding:5px 15px;
+     border-radius: 100%;
+     cursor: pointer; }
+
+     
+      
+
+
+     

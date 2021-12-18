@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CONVERTING FROM MILES (MIL) TO KILOMETERS (KM)</title>
+         <!-- Bootstrap-Core-CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+         <!-- Style-CSS -->
+    <link rel="stylesheet" href="{{asset(css/conversions.css)}}" type="text/css" media="all" />
+<link rel="stylesheet" href="css/font-awesome.css"> 
+<link rel="stylesheet" href="css/swipebox.css">
+<link rel="stylesheet" href="css/jquery-ui.css" />
+</head>
+    <body>
+        
+  <!--Inline CSS-->
+  <style>
+    body{
+color: #222222;
+background-color: #f2f2f0;
+background-color: #56385a;
+font-family: 'Muli', sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+.units{
+padding: 10px;
+font-size: 16px;
+background: rgba(0, 0, 0, 0.2);
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 3px;
+margin-bottom: 10px;
+transition: background .3s;
+color: #e6e6e6;
+
+
+
+}
+</style>
+
+
+        <center>
+            <div style="color:white;font-weight:bold">SOLVING THE QUADRATIC EQUATION</div>
+            <div class="shadow p-3 mb-5 bg-dark rounded" style="width:80%; margin-top:80px; background-color: #4a304d; padding:45px" >      
+                
+        
+        
+       <label for="miles" style="color: white;"><input type='number' name="first" placeholder="Enter Coefficient of x^2" border-style='ridge' id="a" class="units"></label> <br><br>
+       <label for="miles" style="color: white;"><input type='number' name="first" placeholder="Enter Coefficient of x" border-style='ridge' id="b" class="units"></label> <br><br>
+       <label for="miles" style="color: white;"><input type='number' name="first" placeholder="Enter Constant" border-style='ridge' id="c" class="units"></label> <br><br>
+       <label for="kilometers" style="color: white;"> <input type='value' name="second" placeholder="Output Status" border-style='ridge' id="status" class="units" readonly></label> <br><br>
+       <label for="kilometers" style="color: white;"> <input type='value' name="second" placeholder="Output root 1" border-style='ridge' id="root1" class="units" readonly></label> <br><br>
+       <label for="kilometers" style="color: white;"> <input type='value' name="second" placeholder="Output root 2" border-style='ridge' id="root2" class="units" readonly></label> <br><br>
+        <button class="btn btn-success" onclick="answer()">Answers</button>
+           
+            </div>
+            
+        </center>
+         <script>
+             function answer(){
+
+var a=document.getElementById('a').value;
+var b=document.getElementById('b').value;
+var c=document.getElementById('c').value;
+
+// Calculating the Discriminant
+let d = Math.sqrt((b*b) - (4*a*c)); // Calculating the Discriminant
+let x1, x2;
+x1=((-b) + (d)) / ((2)*(a)); // Solution for x1
+x2=((-b) - (d)) / ((2)*(a)); //// Solution for x2
+
+if(d == 0){
+    var status=document.getElementById('status').value=("The solutions are reall");
+    document.getElementById('root1').value=(x1);
+    document.getElementById('root2').value=(x2);
+}
+
+
+
+else if(d > 0){
+    var status=document.getElementById('status').value=("The solutions are real");
+    document.getElementById('root1').value=(x1.toFixed(2));
+    document.getElementById('root2').value=(x2.toFixed(2));
+}
+
+
+else{
+    var status=document.getElementById('status').value=("The solutions are not real");
+    document.getElementById('root1').value=("No real Solution");
+    document.getElementById('root2').value=("No real Solution");
+}
+             }
+         </script> 
+        
+    </body>
+</html>
